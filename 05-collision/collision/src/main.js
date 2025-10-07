@@ -6,12 +6,12 @@ kaplay();
 loadSprite("bean", "sprites/bean.png");
 
 scene("game", () => {
-  const bean = add([pos(120, 80), sprite("bean"), area(), body(), "bean"]);
+  const bean = add([pos(120, 80), sprite("bean"), area(), "bean"]);
 
   const enemy = add([
     pos(800, 400),
     rect(100, 100),
-    area(),
+    area(), // add area component to detect collisions
     color(1, 0, 0),
     "enemy",
   ]);
